@@ -1,0 +1,117 @@
+.container {
+  width: 90%;
+  padding-top: 40px;
+  margin: $zspace auto;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #65aada;
+
+  li {
+    float: left;
+    list-style: none;
+  }
+
+  .list-container:nth-child(4n+4) {
+    margin-right: 0;
+
+    @include media(desktop) {
+      margin: $zspace 3% 25px $zspace;
+    }
+  }
+
+  .list-container:nth-child(3n+3) {
+    @include media(desktop) {
+      margin-right: 0;
+    }
+    @include media(tablet) {
+      margin: $zspace 3% 25px $zspace;
+    }
+  }
+
+  .list-container:nth-child(even) {
+    @include media(tablet) {
+      margin-right: 0;
+    }
+    @include media(mobile) {
+      margin: $zspace 3% 25px $zspace;
+    }
+  }
+
+  .list-container:first-child {
+    @include media(mobile) {
+      margin-right: 0;
+    }
+  }
+
+  .list-container {
+    width: 22.75%;
+    margin: $zspace 3% 25px $zspace;
+    position: relative;
+    overflow: hidden;
+    @include border;
+    @include media(desktop) {
+      width: 31.2%;
+    };
+    @include media(tablet) {
+      width: 48.2%;
+    };
+    @include media(mobile) {
+      width: 100%;
+    };
+
+    .button {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      padding: 5px;
+      @include border;
+      background: #fff;
+
+      i {
+        color: $blue;
+      }
+    }
+
+    img {
+      width: 100%;
+      padding: $hspace;
+      @include transition(all .5s ease-in-out);
+    }
+  }
+
+  .bottom-list {
+    height: 30px;
+    margin-bottom: -2px;
+    width: 102%;
+
+    li {
+      width: 20%;
+      padding: 5px $zspace;
+      text-align: center;
+      border-left: $blue solid 2.5px;
+      border-top: $blue solid 2.5px;
+      padding: 10px 0;
+      color: $blue;
+      font-size: $pfont;
+      @include transition(all 0.5s ease-in-out);
+
+    }
+
+    li:first-child {
+      margin-left: -2px;
+    }
+
+    li:nth-child(4) {
+      position: relative;
+    }
+
+    .arrow-down {
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #fff;
+      position: absolute;
+      bottom: -7px;
+      left: 13px;
+    }
+  }
+}

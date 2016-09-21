@@ -1,0 +1,27 @@
+@mixin border {
+  border: #65aada solid 2.5px;
+  border-radius: 2px;
+}
+
+@mixin hoverAnimation {
+  opacity: 1;
+  transform: translate(0, 6px);
+}
+
+@mixin media($bp) {
+  @if $bp == mobile {
+    @media only screen and (max-width: 400px) {
+      @content;
+    }
+  }
+  @if $bp == tablet {
+    @media only screen and (max-width: 650px) {
+      @content;
+    }
+  }
+  @if $bp == desktop {
+    @media only screen and (max-width: 950px) {
+      @content;
+    }
+  }
+}
